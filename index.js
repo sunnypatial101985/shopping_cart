@@ -47,10 +47,6 @@ connectDb(DB_URL, DB_NAME)
 app.use(express.static('public'));
 app.use('/images', express.static('images'));
 
-app.get('/', function(req, res) {
-    res.send('Hello World')
-})
-
 // new code added
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, './frontend/build')))
